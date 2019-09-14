@@ -1,0 +1,81 @@
+Trees:
+    nodes linked together in certain way.
+    Nodes in tree have parent and child relationship. 
+    Node is linked to:
+        0-+ child notes
+        0-1 parent nodes
+    Special node at top of tree called root node.(where all nodes descend from)
+
+Root:
+    -will have no parent
+Leaf:
+    -Node without any children
+
+Binary Tree:
+    -tree with additional limitation. 
+    -Node can only have 0,1,or 2 children.
+    *branch signifies decision path connecting one node to another.
+    *subtree is a mini tree within a binary tree
+
+Binary search trees:
+    -Binary tree taken a step further.
+    -All left child nodes will have lower values than the parent node 
+    -All right child nodes will have higher values than the parent node
+
+Key Terms
+    Trees 
+    Child - denotes a nodal relationship within a tree
+    Parent - denotes a nodal relationship within a tree
+    Root - no parent node
+    Leaf - no child node
+    Binary tree - only has 3 options for number of children 0,1,2
+    Branch - relationship between two nodes. signifies a decision path
+    Subtree
+    Binary search tree
+    Balanced tree
+
+Binary Search Tree implementation (the white board)
+    -node in BST holds key, value, left and right pointers
+    -key object is null represents an empty tree
+    *fundemental operations:
+        1. insert
+        2. remove
+        3. find
+
+Insert:
+    -no existing tree? insert first node.
+    -start with existing tree 
+        -traverse right or left until you find the right place
+    
+    **Binary Search Trees are recursive in nature. Comprised of a many subtrees
+        *Recursion is solving a problem by solving subproblems until you reach a base case.
+    -Performance.
+        -iterate through height of the tree.
+        -If nodes are inserted equally on left and right branches we have balanced tree.
+        -Each node below has 2 times the number of nodes above. Everyone has 2 children.
+            -average case O(log(n)).
+        -Worst case tree takes worst shape. Always a single child.
+            -O(n)
+            because we have to check everyone.
+Retrieval:
+    -Follows the same pattern until the key is identified.
+    -Then simply retrieves the value of the node.
+        -Performance.
+            -it would require the traversal of the tree height.
+            -At a balanced tree, worst case scenario would be logarithmic.
+            -worst tree shape would require linear time complexity.
+
+Removal
+    movement you may encounter:
+        1.removal of node with no children (easy)
+            -remove by breaking link no further action
+        2.removal of node with one child
+            -make parent of discarededChild point there
+        3.removal of node with two children.
+            -find the minumum value in the right subtree
+            -replace the value of node to be removed with the found minumum
+            -apply remove to the right subtree to remove the duplicate.
+                -perhaps this will need to algorithmicly occur before the replacement
+    
+
+    
